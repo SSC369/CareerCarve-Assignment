@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { TailSpin } from "react-loader-spinner";
 
 const StudentLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,6 +14,7 @@ const StudentLogin = () => {
     email: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -36,6 +38,7 @@ const StudentLogin = () => {
     e.preventDefault();
     const { email, password } = formData;
     try {
+      setLoading(true);
       if (handleValidation()) {
         console.log();
         const url =
@@ -57,6 +60,7 @@ const StudentLogin = () => {
           toast.success(data.message, {
             duration: 1000,
           });
+          setLoading(false);
           setTimeout(() => {
             navigate("/");
           }, 1000);
@@ -129,9 +133,22 @@ const StudentLogin = () => {
 
       <button
         type="submit"
-        className="mt-5 mb-2 bg-black text-white font-medium text-sm rounded-lg h-12 w-full transition hover:bg-gray-900"
+        className="flex justify-center items-center mt-5 mb-2 bg-black text-white font-medium text-sm rounded-lg h-12 w-full transition hover:bg-gray-900"
       >
-        Submit
+        {loading ? (
+          <TailSpin
+            visible={true}
+            height="30"
+            width="30"
+            color="white"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        ) : (
+          "Submit"
+        )}
       </button>
       <p className="text-center text-black text-sm">
         Dont have an account?
