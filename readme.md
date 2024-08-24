@@ -128,36 +128,35 @@ When a meeting is scheduled, an email is sent to the student with the details of
 
 Here's a README.md file tailored for your frontend project. You can adjust any details as needed:
 
-````markdown
 # Frontend for Booking System
 
 This is the frontend application for the booking system built with React and Vite. The application allows users to log in, register, view their home page, and access mentor and student-specific pages.
 
 ## Features
 
-- Login & Registration: Users can log in or register as mentors or students.
-- Home Page: Landing page accessible to all users.
-- Mentor Home: Mentor-specific page to view and manage bookings.
-- Student Meets: Page for students to view and manage their meetings.
+- **Login & Registration**: Users can log in or register as mentors or students.
+- **Home Page**: Landing page accessible to all users.
+- **Mentor Home**: Mentor-specific page to view and manage bookings.
+- **Student Meets**: Page for students to view and manage their meetings.
 
 ## Tech Stack
 
-- React: A JavaScript library for building user interfaces.
-- Vite: A build tool that provides a fast development experience.
-- Tailwind CSS: A utility-first CSS framework for styling.
-- React Router DOM: For routing and navigation.
-- React Hot Toast: For displaying notifications.
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A build tool that provides a fast development experience.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **React Router DOM**: For routing and navigation.
+- **React Hot Toast**: For displaying notifications.
 
 ## Installation
 
 To get started with the frontend, follow these steps:
 
-1. Clone the Repository:
+1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/SSC369/CareerCarve-Assignment.git
    cd CareerCarve-Assignment
    ```
-````
 
 2. **Install Dependencies**:
 
