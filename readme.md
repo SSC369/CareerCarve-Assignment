@@ -135,24 +135,24 @@ This is the frontend application for the booking system built with React and Vit
 
 ## Features
 
-- **Login & Registration**: Users can log in or register as mentors or students.
-- **Home Page**: Landing page accessible to all users.
-- **Mentor Home**: Mentor-specific page to view and manage bookings.
-- **Student Meets**: Page for students to view and manage their meetings.
+- Login & Registration: Users can log in or register as mentors or students.
+- Home Page: Landing page accessible to all users.
+- Mentor Home: Mentor-specific page to view and manage bookings.
+- Student Meets: Page for students to view and manage their meetings.
 
 ## Tech Stack
 
-- **React**: A JavaScript library for building user interfaces.
-- **Vite**: A build tool that provides a fast development experience.
-- **Tailwind CSS**: A utility-first CSS framework for styling.
-- **React Router DOM**: For routing and navigation.
-- **React Hot Toast**: For displaying notifications.
+- React: A JavaScript library for building user interfaces.
+- Vite: A build tool that provides a fast development experience.
+- Tailwind CSS: A utility-first CSS framework for styling.
+- React Router DOM: For routing and navigation.
+- React Hot Toast: For displaying notifications.
 
 ## Installation
 
 To get started with the frontend, follow these steps:
 
-1. **Clone the Repository**:
+1. Clone the Repository:
    ```bash
    git clone https://github.com/SSC369/CareerCarve-Assignment.git
    cd CareerCarve-Assignment
@@ -200,7 +200,3 @@ Ensure you have the following environment variables set in a `.env` file:
 - **`VITE_BACKEND_URL`**: Base URL for the backend API.
 
 Happy coding!
-
-```
-
-```
