@@ -49,7 +49,7 @@ const MentorHome = () => {
   return (
     <div className="min-h-dvh flex flex-col pt-5 pb-8 items-center">
       <div className="flex items-center justify-between w-[80%] bg-slate-900 text-white px-5 py-3  rounded-lg">
-        <h1 className="md:text-2xl text-xl font-semibold">CareerCarve meets</h1>
+        <h1 className="md:text-xl text-lg font-semibold">CareerCarve meets</h1>
         <TbLogout
           onClick={() => {
             Cookies.remove("ccMentorToken");

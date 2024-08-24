@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-col py-5 min-h-dvh  items-center">
+      <div className="flex flex-col py-5 min-h-dvh  items-center min-w-[300px]">
         <div className="flex items-center justify-between w-[80%] bg-slate-900 text-white px-5 py-3  rounded-lg">
           <h1 className="md:text-2xl text-lg font-semibold">CareerCarve</h1>
           <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ const Home = () => {
               onClick={() => navigate("/meets")}
             >
               <p className="hidden md:flex">Meets</p>
-              <SlCalender fontSize={24} />
+              <SlCalender fontSize={20} />
             </div>
 
             <TbLogout
@@ -80,12 +80,12 @@ const Home = () => {
                 navigate("/login");
               }}
               className="cursor-pointer"
-              fontSize={30}
+              fontSize={26}
             />
           </div>
         </div>
 
-        <div className="flex items-center mt-5">
+        <div className="flex justify-center items-center mt-5 w-[80%] max-w-[600px]">
           <input
             value={roleInput}
             onChange={(e) => setRoleInput(e.target.value)}
@@ -108,7 +108,7 @@ const Home = () => {
           Ex: Equity Research or Digital Marketing
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 w-[80%]">
           {loading ? (
             <Loader />
           ) : (
@@ -123,7 +123,7 @@ const Home = () => {
               ) : (
                 <>
                   <p className="font-semibold text-slate-700">Search Results</p>
-                  <ul className=" flex flex-col md:flex-row gap-5 mt-4 text-sm">
+                  <ul className=" flex flex-col md:flex-row gap-5 mt-4 text-sm ">
                     {mentors?.map((mentor) => {
                       return <Mentor key={v4()} mentorData={mentor} />;
                     })}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 } from "uuid";
-import { RiCalendarScheduleLine } from "react-icons/ri";
+import { BsPersonFill } from "react-icons/bs";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -52,6 +52,7 @@ const Mentor = ({ mentorData }) => {
       key={id}
     >
       <div className="flex gap-2 items-center">
+        <BsPersonFill fontSize={18} />
         <p className="text-slate-600 font-medium">Mentor Name:</p>
         <p>{mentor}</p>
       </div>

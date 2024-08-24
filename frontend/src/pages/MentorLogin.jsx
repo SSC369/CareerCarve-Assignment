@@ -119,16 +119,6 @@ const MentorLogin = () => {
         )}
       </div>
 
-      <div className="flex justify-between items-center mt-3">
-        <div className="flex items-center">
-          <input type="checkbox" className="mr-1" />
-          <label className="text-black text-sm ml-2">Remember me</label>
-        </div>
-        <span className="text-blue-500 text-sm cursor-pointer">
-          Forgot password?
-        </span>
-      </div>
-
       <button
         type="submit"
         className="flex justify-center items-center mt-5 mb-2 bg-black text-white font-medium text-sm rounded-lg h-12 w-full transition hover:bg-gray-900"
