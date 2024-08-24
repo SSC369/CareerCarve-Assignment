@@ -131,18 +131,23 @@ const retrieveMentorsByRole = async (req, res) => {
     db.all(`SELECT * FROM mentors;`, [], (err, mentors) => {
       if (err) return res.status(500).json({ message: err.message });
 
-      let queryResults = [];
+      const queryResults = new Map();
       mentors.forEach((mentor) => {
         const formattedRoles = JSON.parse(mentor.roles);
 
         formattedRoles.forEach((r) => {
           if (r.toLowerCase().includes(query.toLowerCase())) {
             const { id, username, roles } = mentor;
-            queryResults.push({ id, mentor: username, roles });
+            if (!queryResults.has(id)) {
+              queryResults.set(id, { id, mentor: username, roles });
+            }
           }
         });
       });
-      return res.status(200).json({ mentors: queryResults });
+
+      return res
+        .status(200)
+        .json({ mentors: Array.from(queryResults.values()) });
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
